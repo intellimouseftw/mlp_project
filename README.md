@@ -53,6 +53,7 @@ Description of the dictionaries are as follows:
 	* (str variable) search_type - select between "random" and "grid". Specifies the type of search to perform, RandomizedSearchCV vs GridSearchCV. Do note that if "grid" is chosen for (pick_best_model = True) or (regtype = rfreg), it will be a very computationally expensive process.
 	* (int variable) n_iter - specifies the number of random search iterations to carry out.
 	* (str variable) reg_type - if (pick_best_model = False), then the mlp will perform hyperparameter tuning over the specified reg_type algorithm.
+	
 | regtype       | Algorithm         |
 | ------------- |-------------------|
 | 'linear'      | Linear Regression |
