@@ -55,7 +55,7 @@ Description of the dictionaries are as follows:
 	* (str variable) reg_type - if (pick_best_model = False), then the mlp will perform hyperparameter tuning over the specified reg_type algorithm. See below for available inputs and the respective type.
 	* (int variable) rand_s_cv - specifies the random state used for stratified k-fold splits when performing hyperparameter tuning.
 	
-| regtype       | Algorithm         |
+* | regtype       | Algorithm         |
 | ------------- |-------------------|
 | 'linear'      | Linear Regression |
 | 'lasso'       | Lasso Regression  |
