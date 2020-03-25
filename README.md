@@ -63,7 +63,7 @@ Description of the dictionaries are as follows:
 
 
 
--
+
 	* (int variable) rand_s_cv - specifies the random state used for stratified k-fold splits when performing hyperparameter tuning.
 5) "instance_file": Specifies the file name for the new instances to perform predictions on (MUST be a csv file placed in "predictions" folder)
 
