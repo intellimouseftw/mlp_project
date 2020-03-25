@@ -1,6 +1,5 @@
 
 ## DESCRIPTION ##
-=================
 This README serves as a guide and documentation on the usage of the machine learning pipeline created for the scooter rental dataset.
 
 The MLP has been initialized for these following ML algorithms in mind:
@@ -12,7 +11,6 @@ The MLP has been initialized for these following ML algorithms in mind:
 
 
 ## MAIN FILES ##
-================
 
 ### run.sh
 ----------
@@ -76,7 +74,6 @@ Description of the dictionaries are as follows:
 
 
 ## USAGE ##
-===========
 Tweak config.json to the desired settings, then execute run.sh script.
 
 A default config file with the best algorithm and tuning parameters, along with the best models (saved as scikit-learn objects) can be found in the "best model" folder.
