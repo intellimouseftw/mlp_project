@@ -1,0 +1,35 @@
+{
+"data_source":
+"https://aisgaiap.blob.core.windows.net/aiap6-assessment-data/scooter_rental_data.csv",
+
+"preprocessing_dict":
+{"cat_label":"weather,season,part_of_day",
+"cont_bin_label":"temperature_sq,relative-humidity_sq,weekday",
+"tar_label":"cbrt_guest-users,cbrt_registered-users",
+"test_sz":0.2,
+"rand_s_split":10},
+
+"hyperparameter_dict":
+{"reg_val": [1, 2, 4, 10, 21, 46, 100, 215, 464, 1000], 
+"l1_ratio": [0.1, 0.3, 0.5, 0.7, 0.9], 
+"n_estimators": [410,420,430,440,450,460,475,490], 
+"max_features": ["sqrt"], 
+"max_depth": [38,39,40,41,42, 43], 
+"min_samples_split": [8,10,12,14,16], 
+"min_samples_leaf": [2,3, 4,5], 
+"bootstrap": [true]},
+
+"mlp_dict":
+{"pick_best_model":false,
+"search_type":"grid",
+"n_iter":20,
+"regtype":"rfreg",
+"rand_s_cv":5},
+
+"instance_file":
+"example_instances.csv",
+
+"prediction_dict":
+{"save_pred":true,
+"pred_filename":"Predictions.csv"}
+}
