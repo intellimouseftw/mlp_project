@@ -53,7 +53,6 @@ Description of the dictionaries are as follows:
 	* (str variable) search_type - select between "random" and "grid". Specifies the type of search to perform, RandomizedSearchCV vs GridSearchCV. Do note that if "grid" is chosen for (pick_best_model = True) or (regtype = rfreg), it will be a very computationally expensive process.
 	* (int variable) n_iter - specifies the number of random search iterations to carry out.
 	* (str variable) reg_type - if (pick_best_model = False), then the mlp will perform hyperparameter tuning over the specified reg_type algorithm.
-
 | regtype       | Algorithm         |
 | ------------- |-------------------|
 | 'linear'      | Linear Regression |
@@ -61,8 +60,11 @@ Description of the dictionaries are as follows:
 | 'ridge'       | Ridge Regression  | 
 | 'elnet'       | Elastic Net Reg   |
 | 'rfreg'       | Random Forest Reg |
-	* (int variable) rand_s_cv - specifies the random state used for stratified k-fold splits when performing hyperparameter tuning.
 
+
+
+-
+	* (int variable) rand_s_cv - specifies the random state used for stratified k-fold splits when performing hyperparameter tuning.
 5) "instance_file": Specifies the file name for the new instances to perform predictions on (MUST be a csv file placed in "predictions" folder)
 
 6) "prediction_dist": Dictionary holding arguments to be passed down within the predictions step.
