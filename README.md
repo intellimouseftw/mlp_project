@@ -32,29 +32,27 @@ Description of the dictionaries are as follows:
 1) "data_source": Specifies the source for the dataset (can be in either url or filepath)
 
 2) "preprocessing_dict": Dictionary holding the arguments to be passed down within the data pre-processing step.
-* (str variable) cat_label  - labels of categorical variables (excluding binary variables) to be used in the model, separated by commas without spacing.
-* (str variable) cont_bin_label  - labels of continuous and binary variables to be used in the model, separated by commas without spacing.
-* (str variable) tar_label - labels of target variables to be used in the model, separated by commas without spacing.
-* (float variable) test_sz - specifies the ratio of data split from the main dataset to be used as test data for model metrics purposes.
-* (int variable) rand_s_split - specifies the random state used for the train-test-split method in scikit-learn.
+	* (str variable) cat_label  - labels of categorical variables (excluding binary variables) to be used in the model, separated by commas without spacing.
+	* (str variable) cont_bin_label  - labels of continuous and binary variables to be used in the model, separated by commas without spacing.
+	* (str variable) tar_label - labels of target variables to be used in the model, separated by commas without spacing.
+	* (float variable) test_sz - specifies the ratio of data split from the main dataset to be used as test data for model metrics purposes.
+	* (int variable) rand_s_split - specifies the random state used for the train-test-split method in scikit-learn.
 
 3) "hyperparameter_dict": Dictionary holding lists that specifies the hyperparameter tuning range.
-* reg_val - Regularization parameter for Lasso, Ridge, ElasticNet algorithms
-* l1_ratio - Scale of l1 penalty for ElasticNet regressions
-* n_estimators - Number of trees in random forest
-* max_features - Number of features to consider at every split
-* max_depth - Maximum number of levels in tree
-* min_samples_split - Minimum number of samples required to split a node
-* min_samples_leaf - Minimum number of samples required at each leaf node
-* bootstrap - Method of selecting samples for training each tree (with replacement/without replacement)
+	* reg_val - Regularization parameter for Lasso, Ridge, ElasticNet algorithms
+	* l1_ratio - Scale of l1 penalty for ElasticNet regressions
+	* n_estimators - Number of trees in random forest
+	* max_features - Number of features to consider at every split
+	* max_depth - Maximum number of levels in tree
+	* min_samples_split - Minimum number of samples required to split a node
+	* min_samples_leaf - Minimum number of samples required at each leaf node
+	* bootstrap - Method of selecting samples for training each tree (with replacement/without replacement)
 
 4) "mlp_dict": Dictionary holding arguments to be passed down within the mlp step.
-* (bool variable) pick_best_model - if True, hyperparameter tuning will perform search across all algorithms. if False, user has to specify "regtype".
-				     MLP will only perform hyperparameter tuning over the specified reg_type algorithm.
-* (str variable) search_type - select between "random" and "grid". Specifies the type of search to perform, RandomizedSearchCV vs GridSearchCV. 
-				do note that if "grid" is chosen for (pick_best_model = True) or (regtype = rfreg), it will be a very computationally expensive process.
-* (int variable) n_iter - specifies the number of random search iterations to carry out.
-* (str variable) reg_type - if (pick_best_model = False), then the mlp will perform hyperparameter tuning over the specified reg_type algorithm.
+	* (bool variable) pick_best_model - if True, hyperparameter tuning will perform search across all algorithms. if False, user has to specify "regtype". MLP will only perform hyperparameter tuning over the specified reg_type algorithm.
+	* (str variable) search_type - select between "random" and "grid". Specifies the type of search to perform, RandomizedSearchCV vs GridSearchCV. Do note that if "grid" is chosen for (pick_best_model = True) or (regtype = rfreg), it will be a very computationally expensive process.
+	* (int variable) n_iter - specifies the number of random search iterations to carry out.
+	* (str variable) reg_type - if (pick_best_model = False), then the mlp will perform hyperparameter tuning over the specified reg_type algorithm.
 
 | regtype       | Algorithm         |
 | ------------- |-------------------|
@@ -64,13 +62,13 @@ Description of the dictionaries are as follows:
 | 'elnet'       | Elastic Net Reg   |
 | 'rfreg'       | Random Forest Reg |
 
-* (int variable) rand_s_cv - specifies the random state used for stratified k-fold splits when performing hyperparameter tuning.
+	* (int variable) rand_s_cv - specifies the random state used for stratified k-fold splits when performing hyperparameter tuning.
 
 5) "instance_file": Specifies the file name for the new instances to perform predictions on (MUST be a csv file placed in "predictions" folder)
 
 6) "prediction_dist": Dictionary holding arguments to be passed down within the predictions step.
-* (bool variable) save_pred - specifies if user wishes to save the predictions into a csv file.
-* (str variable) pred_filename - if save_pred = True, this specifies the filename that the predictions will be saved onto.
+	* (bool variable) save_pred - specifies if user wishes to save the predictions into a csv file.
+	* (str variable) pred_filename - if save_pred = True, this specifies the filename that the predictions will be saved onto.
 
 
 ## USAGE ##
