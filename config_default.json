@@ -1,6 +1,6 @@
 {
 "data_source":
-"https://aisgaiap.blob.core.windows.net/aiap6-assessment-data/scooter_rental_data.csv",
+"INSERT_DATASET_URL_HERE",
 
 "preprocessing_dict":
 {"cat_label":"weather,season,part_of_day",
